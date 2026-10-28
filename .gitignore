@@ -8,3 +8,7 @@ jumper-design/
 __pycache__/
 *.pyc
 .venv/
+
+# Personal drafts and the long raw training log stay on this machine only
+1_FINAL_VIDEOS/POST_CAPTION*.md
+4_TRAINING/dance-train.log
