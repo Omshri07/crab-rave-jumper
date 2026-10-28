@@ -1,0 +1,1666 @@
+{
+  "name": "crab_rave",
+  "title": "Crab Rave",
+  "description": "A neon disco-floor arena with speaker stacks, a DJ booth, a mirror ball and beach balls.",
+  "tags": [
+    "indoor",
+    "legged",
+    "dance",
+    "party"
+  ],
+  "spawn": {
+    "position": [
+      0.0,
+      0.0,
+      0.01
+    ],
+    "yaw": 180,
+    "clearance": 0.6
+  },
+  "physics": {
+    "timestep": 0.002,
+    "cone": "elliptic",
+    "iterations": 150
+  },
+  "sky": {
+    "preset": "night",
+    "fog": false
+  },
+  "lighting": {
+    "preset": "night_moon",
+    "ambient": [
+      0.12,
+      0.1,
+      0.2
+    ],
+    "shadow_quality": "medium",
+    "extra_lights": [
+      {
+        "name": "spot_pink",
+        "type": "spot",
+        "pos": [
+          -1.2,
+          -1.8,
+          2.6
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "cutoff": 32,
+        "exponent": 8,
+        "diffuse": [
+          1.0,
+          0.1,
+          0.7
+        ],
+        "castshadow": true
+      },
+      {
+        "name": "spot_cyan",
+        "type": "spot",
+        "pos": [
+          -1.2,
+          1.8,
+          2.6
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "cutoff": 32,
+        "exponent": 8,
+        "diffuse": [
+          0.1,
+          0.9,
+          1.0
+        ],
+        "castshadow": false
+      },
+      {
+        "name": "spot_lime",
+        "type": "spot",
+        "pos": [
+          1.8,
+          0.0,
+          2.6
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "cutoff": 32,
+        "exponent": 8,
+        "diffuse": [
+          0.6,
+          1.0,
+          0.1
+        ],
+        "castshadow": false
+      }
+    ]
+  },
+  "ground": {
+    "type": "plane",
+    "size": [
+      6,
+      6
+    ],
+    "material": "club_floor",
+    "friction": "concrete",
+    "condim": 3
+  },
+  "defaults": {
+    "condim": 3,
+    "friction": "concrete",
+    "contact": "default"
+  },
+  "materials": [
+    {
+      "name": "club_floor",
+      "base": "concrete",
+      "rgba": [
+        0.03,
+        0.02,
+        0.07,
+        1
+      ]
+    },
+    {
+      "name": "neon_pink",
+      "base": "plastic_red",
+      "rgba": [
+        1.0,
+        0.08,
+        0.65,
+        1
+      ],
+      "emission": 0.9
+    },
+    {
+      "name": "neon_cyan",
+      "base": "plastic_blue",
+      "rgba": [
+        0.05,
+        0.9,
+        1.0,
+        1
+      ],
+      "emission": 0.9
+    },
+    {
+      "name": "neon_lime",
+      "base": "plastic_green",
+      "rgba": [
+        0.55,
+        1.0,
+        0.1,
+        1
+      ],
+      "emission": 0.9
+    },
+    {
+      "name": "neon_purple",
+      "base": "plastic_blue",
+      "rgba": [
+        0.55,
+        0.1,
+        1.0,
+        1
+      ],
+      "emission": 0.9
+    },
+    {
+      "name": "speaker_black",
+      "base": "plastic_white",
+      "rgba": [
+        0.05,
+        0.05,
+        0.06,
+        1
+      ]
+    },
+    {
+      "name": "woofer",
+      "base": "rubber",
+      "rgba": [
+        0.12,
+        0.12,
+        0.14,
+        1
+      ]
+    },
+    {
+      "name": "gold_trim",
+      "base": "metal",
+      "rgba": [
+        1.0,
+        0.78,
+        0.2,
+        1
+      ],
+      "metallic": 1.0,
+      "roughness": 0.25
+    },
+    {
+      "name": "mirror",
+      "base": "metal",
+      "rgba": [
+        0.85,
+        0.92,
+        1.0,
+        1
+      ],
+      "reflectance": 0.7,
+      "metallic": 1.0,
+      "roughness": 0.05
+    },
+    {
+      "name": "beach_ball",
+      "base": "plastic_yellow",
+      "rgba": [
+        1.0,
+        0.85,
+        0.1,
+        1
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "name": "tile_0_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        0.0,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        0.4,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        0.8,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_0_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -1.2000000000000002,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        0.0,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        0.4,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        0.8,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_1_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.8,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        0.0,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        0.4,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        0.8,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_2_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        -0.4,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        0.0,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        0.4,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        0.8,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_3_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.0,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        0.0,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        0.4,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        0.8,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_4_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.4,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        0.0,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        0.4,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        0.8,
+        0.005
+      ],
+      "material": "neon_purple",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_5_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        0.8,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_cyan",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        -1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        -0.8,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        -0.4,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        0.0,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_4",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        0.4,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_5",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        0.8,
+        0.005
+      ],
+      "material": "neon_pink",
+      "friction": "concrete"
+    },
+    {
+      "name": "tile_6_6",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.195,
+        0.195,
+        0.005
+      ],
+      "pos": [
+        1.2000000000000002,
+        1.2000000000000002,
+        0.005
+      ],
+      "material": "neon_lime",
+      "friction": "concrete"
+    },
+    {
+      "name": "speaker_0",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.2,
+        0.2,
+        0.45
+      ],
+      "pos": [
+        2.0,
+        2.0,
+        0.45
+      ],
+      "euler": [
+        0,
+        0,
+        225
+      ],
+      "material": "speaker_black",
+      "friction": "plastic"
+    },
+    {
+      "name": "speaker_0_trim",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.205,
+        0.205,
+        0.015
+      ],
+      "pos": [
+        2.0,
+        2.0,
+        0.91
+      ],
+      "euler": [
+        0,
+        0,
+        225
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "speaker_0_woofer_0",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        2.0,
+        2.0,
+        0.27
+      ],
+      "euler": [
+        90,
+        0,
+        315
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_0_woofer_1",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        2.0,
+        2.0,
+        0.65
+      ],
+      "euler": [
+        90,
+        0,
+        315
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_1",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.2,
+        0.2,
+        0.45
+      ],
+      "pos": [
+        2.0,
+        -2.0,
+        0.45
+      ],
+      "euler": [
+        0,
+        0,
+        135
+      ],
+      "material": "speaker_black",
+      "friction": "plastic"
+    },
+    {
+      "name": "speaker_1_trim",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.205,
+        0.205,
+        0.015
+      ],
+      "pos": [
+        2.0,
+        -2.0,
+        0.91
+      ],
+      "euler": [
+        0,
+        0,
+        135
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "speaker_1_woofer_0",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        2.0,
+        -2.0,
+        0.27
+      ],
+      "euler": [
+        90,
+        0,
+        225
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_1_woofer_1",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        2.0,
+        -2.0,
+        0.65
+      ],
+      "euler": [
+        90,
+        0,
+        225
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_2",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.2,
+        0.2,
+        0.45
+      ],
+      "pos": [
+        -2.0,
+        2.0,
+        0.45
+      ],
+      "euler": [
+        0,
+        0,
+        315
+      ],
+      "material": "speaker_black",
+      "friction": "plastic"
+    },
+    {
+      "name": "speaker_2_trim",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.205,
+        0.205,
+        0.015
+      ],
+      "pos": [
+        -2.0,
+        2.0,
+        0.91
+      ],
+      "euler": [
+        0,
+        0,
+        315
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "speaker_2_woofer_0",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        -2.0,
+        2.0,
+        0.27
+      ],
+      "euler": [
+        90,
+        0,
+        405
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_2_woofer_1",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        -2.0,
+        2.0,
+        0.65
+      ],
+      "euler": [
+        90,
+        0,
+        405
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_3",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.2,
+        0.2,
+        0.45
+      ],
+      "pos": [
+        -2.0,
+        -2.0,
+        0.45
+      ],
+      "euler": [
+        0,
+        0,
+        45
+      ],
+      "material": "speaker_black",
+      "friction": "plastic"
+    },
+    {
+      "name": "speaker_3_trim",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.205,
+        0.205,
+        0.015
+      ],
+      "pos": [
+        -2.0,
+        -2.0,
+        0.91
+      ],
+      "euler": [
+        0,
+        0,
+        45
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "speaker_3_woofer_0",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        -2.0,
+        -2.0,
+        0.27
+      ],
+      "euler": [
+        90,
+        0,
+        135
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "speaker_3_woofer_1",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.13,
+        0.02
+      ],
+      "pos": [
+        -2.0,
+        -2.0,
+        0.65
+      ],
+      "euler": [
+        90,
+        0,
+        135
+      ],
+      "material": "woofer"
+    },
+    {
+      "name": "dj_booth",
+      "shape": "box",
+      "kind": "static",
+      "size": [
+        0.3,
+        0.9,
+        0.28
+      ],
+      "pos": [
+        2.35,
+        0.0,
+        0.28
+      ],
+      "material": "speaker_black",
+      "friction": "plastic"
+    },
+    {
+      "name": "dj_booth_glow",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.01,
+        0.88,
+        0.04
+      ],
+      "pos": [
+        2.04,
+        0.0,
+        0.2
+      ],
+      "material": "neon_cyan"
+    },
+    {
+      "name": "dj_decks",
+      "shape": "box",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.18,
+        0.6,
+        0.02
+      ],
+      "pos": [
+        2.3,
+        0.0,
+        0.58
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "truss_post_a",
+      "shape": "cylinder",
+      "kind": "static",
+      "size": [
+        0.03,
+        0.9
+      ],
+      "pos": [
+        -0.2,
+        -1.9,
+        0.9
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "truss_post_b",
+      "shape": "cylinder",
+      "kind": "static",
+      "size": [
+        0.03,
+        0.9
+      ],
+      "pos": [
+        -0.2,
+        1.9,
+        0.9
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "truss_bar",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.03,
+        1.9
+      ],
+      "pos": [
+        -0.2,
+        0.0,
+        1.8
+      ],
+      "euler": [
+        90,
+        0,
+        0
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "mirror_ball",
+      "shape": "sphere",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.2
+      ],
+      "pos": [
+        0.0,
+        0.0,
+        1.45
+      ],
+      "material": "mirror"
+    },
+    {
+      "name": "mirror_ball_cable",
+      "shape": "cylinder",
+      "kind": "static",
+      "collision": false,
+      "size": [
+        0.005,
+        0.18
+      ],
+      "pos": [
+        0.0,
+        0.0,
+        1.65
+      ],
+      "material": "gold_trim"
+    },
+    {
+      "name": "beach_ball_0",
+      "shape": "sphere",
+      "kind": "dynamic",
+      "size": [
+        0.09
+      ],
+      "pos": [
+        1.2,
+        0.9,
+        0.12
+      ],
+      "mass": 0.05,
+      "material": "beach_ball",
+      "friction": [
+        0.6,
+        0.01,
+        0.002
+      ],
+      "condim": 6,
+      "contact": "bouncy"
+    },
+    {
+      "name": "beach_ball_1",
+      "shape": "sphere",
+      "kind": "dynamic",
+      "size": [
+        0.09
+      ],
+      "pos": [
+        -1.1,
+        -1.2,
+        0.12
+      ],
+      "mass": 0.05,
+      "material": "beach_ball",
+      "friction": [
+        0.6,
+        0.01,
+        0.002
+      ],
+      "condim": 6,
+      "contact": "bouncy"
+    },
+    {
+      "name": "beach_ball_2",
+      "shape": "sphere",
+      "kind": "dynamic",
+      "size": [
+        0.09
+      ],
+      "pos": [
+        0.6,
+        -1.4,
+        0.12
+      ],
+      "mass": 0.05,
+      "material": "beach_ball",
+      "friction": [
+        0.6,
+        0.01,
+        0.002
+      ],
+      "condim": 6,
+      "contact": "bouncy"
+    }
+  ],
+  "cameras": [
+    {
+      "name": "stage_cam",
+      "pos": [
+        3.0,
+        -3.0,
+        1.5
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "fovy": 45
+    },
+    {
+      "name": "front_cam",
+      "pos": [
+        -2.4,
+        0.0,
+        0.6
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.25
+      ],
+      "fovy": 45
+    },
+    {
+      "name": "top_cam",
+      "pos": [
+        0.0,
+        0.0,
+        4.5
+      ],
+      "target": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fovy": 50
+    }
+  ],
+  "viewer": {
+    "camera_pos": [
+      3.0,
+      -3.0,
+      1.5
+    ],
+    "camera_target": [
+      0.0,
+      0.0,
+      0.25
+    ]
+  }
+}

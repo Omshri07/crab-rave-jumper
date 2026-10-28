@@ -1,0 +1,23 @@
+Crab Rave: a Jumper dance entry
+Copyright 2026 Omshri07
+
+This repository is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It builds on work by KingKong Tech, released under Apache-2.0:
+  - https://github.com/KingKongRobotics/jumper        (training toolkit and robot model)
+  - https://github.com/KingKongRobotics/jumper-design (scene and skin tools, original Jumper skin)
+
+What is derived from that work, and where:
+  - 3_SKIN/jumper_neon.xml is a modified copy of jumper/assets/jumper/jumper.xml: only colours
+    and materials were changed (see 3_SKIN/make_neon_skin.py).
+  - 2_SCENE/crab_rave.map is a scene package exported with the jumper-design tools. It embeds
+    KingKong's original Jumper skin and robot meshes together with the license and attribution
+    notices that ship inside that archive; those notices stay with the archive.
+  - 4_TRAINING/ holds a policy checkpoint and ONNX export trained with the jumper toolkit on its
+    demonstration dance. The dance choreography itself is KingKong's demo choreography; it is not
+    ours and is not included here.
+
+Not included: the two repositories above, the Python environments, any music.
+The videos in 1_FINAL_VIDEOS/ are silent.
+
+This is an independent project. It is not affiliated with or endorsed by KingKong Tech.

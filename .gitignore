@@ -1,0 +1,10 @@
+# The two working clones are other people's repositories (and hold virtual environments).
+# They are pinned by commit in README.md and 4_TRAINING/COMMANDS.md instead of being copied here.
+jumper/
+jumper-design/
+
+# Machine-specific or regenerable files
+*.tfevents.*
+__pycache__/
+*.pyc
+.venv/
